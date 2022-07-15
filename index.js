@@ -10,14 +10,6 @@ const mongoose = require('mongoose');
     require(`./handlers/${handler}`)(Discord, client);
 });
 
-mongoose.connect(process.env.MONGODB_SRV, {
-    useNewUrlParser: true, 
-    useUnifiedTopology: true, 
-}).then(()=>{
-    console.log('Connected to the Database!')
-}).catch((err) => {
-    console.log(err)
-})
 
 client.login(process.env.TOKEN);
 
