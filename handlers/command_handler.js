@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-module.exports = (Discord, client) =>{
+module.exports = async (Discord, client) =>{
     const command_files = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
     const message = require('../events/guild/messageCreate');
 

@@ -1,6 +1,6 @@
 const fs = require("node:fs");
 
-module.exports = (Discord, client) => {
+module.exports = async (Discord, client) => {
   const loadDirectories = directories => {
     const eventsSubFolder = fs.readdirSync(`./events/${directories}`)
     .filter(file => file.endsWith(".js"));
